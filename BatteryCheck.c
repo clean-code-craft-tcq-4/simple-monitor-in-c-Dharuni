@@ -56,5 +56,17 @@ checkFinalResult(int result)
 
 int main() {
   batteryIsOk(25, 70, 0.7);
+  printf("\n\n");
   batteryIsOk(50, 85, 0);
+  printf("\n\n");
+  batteryIsOk(0, 20, 0.8);
+  printf("\n\n");
+  batteryIsOk(45, 80, 0.8);
+  printf("\n\n");
+  batteryIsOk(5, 15, 0.7);
+  printf("\n\n");
+  batteryIsOk(44, 79, 0.7);
+  printf("\n\n");
+  batteryIsOk(46, 81, 0.7);
+  printf("\n\n");
 }
