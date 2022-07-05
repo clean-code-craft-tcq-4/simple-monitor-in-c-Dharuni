@@ -36,17 +36,23 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
  chargeRateCheckResult = chargeRateRangeCheck(chargeRate, CHARGERATE_MAX);
  printf("temp = %d socc = %d  charge = %d\n",tempCheckResult,socCheckResult,chargeRateCheckResult);
  finalResult = tempCheckResult && socCheckResult && chargeRateCheckResult;
- if(finalResult)
- {
-  printf("Battery is OK ");
-  return E_OK;
- }
- else
- {
-  printf("Battery was not ok due to above reasons set:");
-  return E_NOT_OK;
- }
+ checkFinalResult(finalResult);
+ return finalResult;
   
+}
+
+checkFinalResult(int result)
+{
+     if(result)
+    {
+        assert(result == 1);
+        printf("Battery is ok\n\n");
+    }
+    else
+    {
+        assert(result == 0);
+        printf("Battery was not ok due to above parameters:");
+    }
 }
 
 int main() {
