@@ -12,11 +12,7 @@
 int batteryParamInRange(float param, float param_min, float param_max)
 {
  int result = NO_BREACH;
- if (param < param_min)
- {
-   result = BREACH_LOW;
- }
- if (param > param_max)
+ if (param < param_min || param > param_max)
  {
   result = BREACH_HIGH;
  }
