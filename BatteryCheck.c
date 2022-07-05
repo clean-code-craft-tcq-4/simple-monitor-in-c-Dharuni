@@ -2,9 +2,8 @@
 #include <assert.h>
 #include "BatteryCheck.h"
 
-#define BREACH_HIGH 2
-#define BREACH_LOW  1
-#define NO_BREACH   0
+#define BREACH_HIGH 0
+#define NO_BREACH   1
 
 #define E_OK 1
 #define E_NOT_OK 0
