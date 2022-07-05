@@ -34,7 +34,7 @@ int chargeRateRangeCheck(float param, float chargeRate_max)
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
- int tempCheckResult, socCheckResult, chargeRateCheckResult, finalResult;
+ int tempCheckResult = 0, socCheckResult = 0, chargeRateCheckResult = 0, finalResult =0;
  tempCheckResult = batteryParamInRange(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX); 
  socCheckResult = batteryParamInRange(soc, SOC_MIN, SOC_MAX); 
  chargeRateCheckResult = chargeRateRangeCheck(chargeRate, CHARGERATE_MAX);
