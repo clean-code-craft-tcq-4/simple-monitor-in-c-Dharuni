@@ -38,9 +38,9 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
  tempCheckResult = batteryParamInRange(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX); 
  socCheckResult = batteryParamInRange(soc, SOC_MIN, SOC_MAX); 
  chargeRateCheckResult = chargeRateRangeCheck(chargeRate, CHARGERATE_MAX);
- printf("temp = %d socc = %d  charge = %d\n",temp,socc,charge);
+ printf("temp = %d socc = %d  charge = %d\n",tempCheckResult,socCheckResult,chargeRateCheckResult);
  finalResult = tempCheckResult && socCheckResult && chargeRateCheckResult;
- if((finalResult)
+ if(finalResult)
  {
   return E_OK;
  }
