@@ -45,12 +45,12 @@ checkFinalResult(int result)
      if(result)
     {
         assert(result == 1);
-        printf("Battery is ok\n\n");
+        printf("Battery is ok");
     }
     else
     {
         assert(result == 0);
-        printf("Battery was not ok due to above parameters:");
+        printf("Battery was not ok due to the parameters set to zero");
     }
 }
 
