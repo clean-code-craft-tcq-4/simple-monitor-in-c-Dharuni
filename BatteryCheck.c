@@ -42,6 +42,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
  finalResult = tempCheckResult && socCheckResult && chargeRateCheckResult;
  if(finalResult)
  {
+  printf("Battery is OK ");
   return E_OK;
  }
  else
