@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "BatteryCheck.h"
 
-#define BREACH_HIGH 0
+#define BREACH 0
 #define NO_BREACH   1
 
 #define E_OK 1
@@ -13,7 +13,7 @@ int batteryParamInRange(float param, float param_min, float param_max)
  int result = NO_BREACH;
  if (param < param_min || param > param_max)
  {
-  result = BREACH_HIGH;
+  result = BREACH;
  }
  return result;
 }
@@ -23,7 +23,7 @@ int chargeRateRangeCheck(float param, float chargeRate_max)
   int result = NO_BREACH;
   if (param > chargeRate_max)
   {
-    result = BREACH_HIGH;
+    result = BREACH;
   }
  return result;
 }
