@@ -34,17 +34,19 @@ int chargeRateRangeCheck(float param, float chargeRate_max)
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
- int tempCheckResult, socCheckResult, chargeRateCheckResult;
+ int tempCheckResult, socCheckResult, chargeRateCheckResult, finalResult;
  tempCheckResult = batteryParamInRange(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX); 
  socCheckResult = batteryParamInRange(soc, SOC_MIN, SOC_MAX); 
  chargeRateCheckResult = chargeRateRangeCheck(chargeRate, CHARGERATE_MAX);
- 
- if((tempCheckResult == NO_BREACH) && (socCheckResult == NO_BREACH) && (chargeRateCheckResult == NO_BREACH))
+ printf("temp = %d socc = %d  charge = %d\n",temp,socc,charge);
+ finalResult = tempCheckResult && socCheckResult && chargeRateCheckResult;
+ if((finalResult)
  {
   return E_OK;
  }
  else
  {
+  printf("Battery was not ok due to above reasons set:");
   return E_NOT_OK;
  }
   
